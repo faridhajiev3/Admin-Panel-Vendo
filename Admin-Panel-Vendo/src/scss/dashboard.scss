@@ -1,0 +1,188 @@
+.analysis-info {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .analysis-btn {
+        background-color: #111111;
+        color: #fff;
+        margin: 0 0 0 10px;
+        padding: 6px 14px;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 6px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #04b6e7;
+        }
+
+        @media (max-width: 768px) {
+            margin: 5px 5px 0 0;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+.analysis-main {
+
+    .analysis-content {
+        display: flex;
+        justify-content: space-between;
+        // gap: 70px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    .card-item {
+        background-color: #fff;
+
+        padding: 35px;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+        }
+
+        .card-content {
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-icon {
+            font-size: 25px;
+            border: 1px solid #b8b8b8;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 55px;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            // padding: 30px 0 5px 0;
+            color: #00000080;
+
+            @media (max-width: 768px) {
+                padding: 15px 0 5px 0;
+            }
+        }
+
+        .lastMounth {
+            color: #48B478;
+            padding-top: 40px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+    }
+
+    .dasboard-con {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section {
+            width: 48%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
+            h2 {
+                margin-top: 0;
+                font-size: 1.2em;
+            }
+
+            p {
+                color: #666;
+                font-size: 0.9em;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #eee;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .status {
+                        color: #2ecc71;
+                    }
+
+                    .amount {
+                        color: #e74c3c;
+                    }
+
+                    .sales {
+                        color: #3498db;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .quick-actions {
+        .product-btn {
+            padding: 22px 50px;
+            background-color: #111111;
+            color: #fff;
+            border-radius: 10px;
+            // border: none;
+            margin: 10px 20px 10px 0;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                padding: 14px 28px;
+            }
+        }
+
+
+        .stock-btn {
+            font-size: 16px;
+            padding: 22px 50px;
+            background-color: #f1f5f7;
+            color: #111111;
+            border-radius: 10px;
+            border-color: #9D9D9D66;
+
+            @media (max-width: 768px) {
+                padding: 12px 20px;
+            }
+        }
+    }
+}

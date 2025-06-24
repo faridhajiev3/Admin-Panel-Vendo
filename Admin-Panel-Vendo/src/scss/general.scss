@@ -1,0 +1,114 @@
+.addPro {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .tab {
+        padding: 5px 15px;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        color: #666;
+
+    }
+
+    .active {
+        border-bottom: 2px solid #d4af37;
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+.form-section {
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23333"><path d="M7 10l-5-5 1.41-1.41L7 7.17l4.59-4.58L12 5l-5 5z"/></svg>') no-repeat right 10px center;
+            background-color: #fff;
+        }
+
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .toggle {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input[type="checkbox"] {
+                    width: 40px;
+                    height: 20px;
+                    background: #ccc;
+                    border-radius: 10px;
+                    appearance: none;
+                    position: relative;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:checked {
+                        background: #2ecc71;
+
+                        &:before {
+                            transform: translateX(20px);
+                        }
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        background: #fff;
+                        border-radius: 50%;
+                        top: 2px;
+                        left: 2px;
+                        transition: transform 0.2s;
+                    }
+                }
+
+                span {
+                    font-size: 0.9em;
+                    color: #666;
+                }
+            }
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+
+            +span {
+                display: block;
+                text-align: right;
+                color: #666;
+            }
+        }
+    }
+}
