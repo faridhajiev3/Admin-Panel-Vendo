@@ -1,0 +1,67 @@
+$background-color: #e9f0f5;
+$input-bg-color: #ffffff;
+$border-color: #ccc;
+$text-color: #333;
+
+
+.container-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-detail {
+    flex: 1;
+    min-width: 200px;
+    background-color: $input-bg-color;
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    h3 {
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 10px;
+    }
+}
+
+.form-group-detail {
+    margin-bottom: 15px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        color: $text-color;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+    }
+}
+
+.checkbox-group {
+    label {
+        display: block;
+        font-size: 14px;
+        color: $text-color;
+        margin-bottom: 5px;
+
+        input {
+            margin-right: 5px;
+        }
+    }
+}
