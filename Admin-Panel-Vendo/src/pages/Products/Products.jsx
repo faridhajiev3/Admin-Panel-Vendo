@@ -1,8 +1,26 @@
 import React from 'react'
+import { TbBasketMinus, TbBasketPlus } from 'react-icons/tb'
+import { GiTwoCoins } from 'react-icons/gi'
+import { FaWarehouse } from 'react-icons/fa6'
+import "../../scss/products.scss"
+import ProductsCard from '../../components/ProductsCard'
+import { ProductsData } from '../../data/ProductsData'
+import ProductsTable from './ProductsTable'
 
 function Products() {
   return (
-    <div>Products</div>
+    <div className='products-container'>
+      <h2>Products</h2>
+      <div className='analysis-content'>
+        <ProductsCard icon={<TbBasketPlus />} content={"Total Income"} price={"150"} />
+        <ProductsCard icon={<GiTwoCoins />} content={"Total Order"} price={"600"} />
+        <ProductsCard icon={<FaWarehouse />} content={"Active Products"} price={"3000"} />
+        <ProductsCard icon={<TbBasketMinus />} content={"Customer Count"} price={"1200"} />
+      </div>
+      <div className='tableData'>
+      <ProductsTable/>
+      </div>
+    </div>
   )
 }
 
