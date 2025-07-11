@@ -9,6 +9,7 @@ import General from './addnewproduct/General'
 import Detail from './addnewproduct/Detail'
 import AddProduct from './addnewproduct/AddProduct'
 import Orders from './pages/Orders/Orders'
+import Transactions from './pages/Transactions/Transactions'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/product" element={<Products />} />
             <Route path="/order" element={<Orders />} />
+            <Route path="/transactions" element={<Transactions />} />
             <Route path="/addproduct" element={<AddProduct />} >
               <Route index element={<General />} />
               <Route path='general' element={<General />} />

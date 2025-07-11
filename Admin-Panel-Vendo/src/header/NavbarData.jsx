@@ -20,5 +20,10 @@ export const NavbarData = [
         name: "Orders",
         icon: <GiTwoCoins />,
     },
+    {
+        path: "/transactions",
+        name: "Transactions",
+        icon: <GiTwoCoins />,
+    },
 
 ];
