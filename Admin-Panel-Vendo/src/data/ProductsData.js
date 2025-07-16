@@ -8,7 +8,7 @@ export const ProductsData = [
         category: "Blush",
         stock: 90,
         salesChange: "+156",
-        price: "79 $",
+        price: "79",
         status: "Active",
         rating: 4.9
     },
@@ -19,7 +19,7 @@ export const ProductsData = [
         category: "Foundation",
         stock: 48,
         salesChange: "-45",
-        price: "49 $",
+        price: "49",
         status: "Active",
         rating: 4.6
     },
@@ -30,7 +30,7 @@ export const ProductsData = [
         category: "Highlighter",
         stock: 133,
         salesChange: "+138",
-        price: "79 $",
+        price: "79",
         status: "Active",
         rating: 4.9
     }

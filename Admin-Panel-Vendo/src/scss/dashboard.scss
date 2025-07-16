@@ -1,5 +1,4 @@
-
-.analysis-info { 
+.analysis-info {
     display: flex;
     justify-content: space-between;
 
@@ -36,9 +35,9 @@
     .analysis-content {
         display: flex;
         justify-content: space-between;
-        // gap: 70px;
 
-        @media (max-width: 768px) {
+
+        @media (max-width: 968px) {
             flex-direction: column;
             gap: 15px;
         }
@@ -46,9 +45,22 @@
 
 }
 
-.graphs{
+.graphs {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-top: 40px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .graphs {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .graphs>div {
+        width: 100% !important;
+        max-width: 530px;
+    }
 }

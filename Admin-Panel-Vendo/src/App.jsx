@@ -10,6 +10,12 @@ import Detail from './addnewproduct/Detail'
 import AddProduct from './addnewproduct/AddProduct'
 import Orders from './pages/Orders/Orders'
 import Transactions from './pages/Transactions/Transactions'
+import Googleİnformation from './addnewproduct/Googleİnformation'
+import Profile from './settings/Profile'
+import Settings from './settings/Settings'
+import Brand from './settings/Brand'
+import ChangePassword from './settings/ChangePassword'
+import Security from './settings/Security'
 
 function App() {
 
@@ -28,6 +34,14 @@ function App() {
               <Route index element={<General />} />
               <Route path='general' element={<General />} />
               <Route path='detail' element={<Detail />} />
+              <Route path='information' element={<Googleİnformation />} />
+            </Route>
+            <Route path='/settings' element={<Settings/>}>
+              <Route index element={<Profile />} />
+              <Route path='profil' element={<Profile />} />
+              <Route path='brand' element={<Brand />} />
+              <Route path='password' element={<ChangePassword />} />
+              <Route path='security' element={<Security />} />
             </Route>
           </Routes>
         </div>
@@ -37,3 +51,4 @@ function App() {
 }
 
 export default App
+

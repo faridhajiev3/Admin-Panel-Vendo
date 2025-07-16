@@ -6,8 +6,10 @@ import "../../scss/products.scss"
 import ProductsCard from '../../components/ProductsCard'
 import { ProductsData } from '../../data/ProductsData'
 import ProductsTable from './ProductsTable'
+import { useNavigate } from 'react-router-dom'
 
 function Products() {
+  const navigate = useNavigate()
   return (
     <div className='products-container'>
       <h2>Products</h2>
@@ -17,8 +19,11 @@ function Products() {
         <ProductsCard icon={<FaWarehouse />} content={"Active Products"} price={"3000"} />
         <ProductsCard icon={<TbBasketMinus />} content={"Customer Count"} price={"1200"} />
       </div>
-      <div className='tableData'>
-      <ProductsTable/>
+      <div className='output'>
+        <button onClick={()=>navigate("/addproduct")}>Add new product</button>
+      </div>
+      <div className='table-wrapper'>
+        <ProductsTable />
       </div>
     </div>
   )

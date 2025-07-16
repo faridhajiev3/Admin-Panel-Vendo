@@ -9,19 +9,17 @@ function Topbar() {
     return (
         <div className="topbar">
             <div className='icons'>
-                <TbWorld className='i'/>
-                <FaBell className='i'/>
-            </div>
-            {/* <div className='view'>
-                <div className="dropdown">
-                    <select>
-                        <option>Mağazalar</option>
-                        <option>Mağaza 1</option>
-                        <option>Mağaza 2</option>
-                    </select>
-                </div>
+                <TbWorld className='i' />
+                <FaBell className='i' />
+                <div className='view'>
+                    <div className="dropdown">
+                        <select>
+                            <option>Ölkələr</option>
+                        </select>
+                    </div>
 
-            </div> */}
+                </div>
+            </div>
             <div className='users'>
                 <div className='usersImage'>
 
