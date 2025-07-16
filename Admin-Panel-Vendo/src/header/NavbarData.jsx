@@ -3,6 +3,8 @@ import { FaChartPie } from "react-icons/fa6";
 import { GiTwoCoins } from "react-icons/gi";
 import { TiShoppingCart } from "react-icons/ti";
 import { IoPerson } from "react-icons/io5";
+import { CiPercent } from "react-icons/ci";
+import { CiSettings } from "react-icons/ci";
 
 export const NavbarData = [
     {
@@ -23,7 +25,12 @@ export const NavbarData = [
     {
         path: "/transactions",
         name: "Transactions",
-        icon: <GiTwoCoins />,
+        icon: <CiPercent />,
+    },
+    {
+        path: "/settings",
+        name: "Settings",
+        icon: <CiSettings />,
     },
 
 ];

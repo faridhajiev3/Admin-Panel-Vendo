@@ -1,114 +1,135 @@
 .addPro {
     max-width: 1300px;
     margin: 0 auto;
-    background: #fff;
+    background: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    .form-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
 
-    .tab {
-        padding: 5px 15px;
-        border-bottom: 2px solid transparent;
-        cursor: pointer;
-        color: #666;
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
 
+            .form-group:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
     }
 
-    .active {
-        border-bottom: 2px solid #d4af37;
-        color: #000;
-        font-weight: bold;
-    }
-}
-
-.form-section {
     .form-group {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
         }
 
         input,
         select {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 12px;
+            border: 1px solid #e1e5e9;
+            border-radius: 6px;
             box-sizing: border-box;
+            background: #fff;
+            font-size: 14px;
+            color: #333;
+
+            &::placeholder {
+                color: #adb5bd;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+            }
         }
 
-        select {
-            appearance: none;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23333"><path d="M7 10l-5-5 1.41-1.41L7 7.17l4.59-4.58L12 5l-5 5z"/></svg>') no-repeat right 10px center;
-            background-color: #fff;
+    }
+
+    .form-section-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #e1e5e9;
+
+        h3 {
+            margin: 0 0 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
         }
 
-        .toggle-group {
+        .form-group {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+    }
+
+
+    .toggle-group {
+        .toggle-item {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            padding: 16px 0;
+            border-bottom: 1px solid #f1f3f4;
 
-            .toggle {
-                display: flex;
-                align-items: center;
-                gap: 10px;
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
 
-                input[type="checkbox"] {
-                    width: 40px;
-                    height: 20px;
-                    background: #ccc;
-                    border-radius: 10px;
-                    appearance: none;
-                    position: relative;
-                    cursor: pointer;
-                    outline: none;
+            .toggle-content {
+                flex: 1;
 
-                    &:checked {
-                        background: #2ecc71;
-
-                        &:before {
-                            transform: translateX(20px);
-                        }
-                    }
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        width: 16px;
-                        height: 16px;
-                        background: #fff;
-                        border-radius: 50%;
-                        top: 2px;
-                        left: 2px;
-                        transition: transform 0.2s;
-                    }
+                .toggle-label {
+                    display: block;
+                    font-weight: 500;
+                    color: #333;
+                    font-size: 14px;
+                    margin-bottom: 4px;
                 }
 
-                span {
-                    font-size: 0.9em;
+                .toggle-description {
+                    margin: 0;
+                    font-size: 12px;
                     color: #666;
+                    line-height: 1.4;
                 }
             }
-        }
 
-        input[type="range"] {
-            width: 100%;
-            margin-top: 5px;
 
-            +span {
-                display: block;
-                text-align: right;
-                color: #666;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
             }
         }
+    }
+
+    @media (max-width: 768px) {
+        padding: 16px;
     }
 }

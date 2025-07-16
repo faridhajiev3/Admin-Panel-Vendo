@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { NavbarData } from './NavbarData'
 
 function Sidebar() {
-    return (
+    return ( 
         <div className='sidebar'>
             <div>
                 <div className='logo'>
@@ -20,12 +20,12 @@ function Sidebar() {
                     }
                 </div>
             </div>
-            <div className="bottom-menu">
-                <a href="#">Mağazalar</a>
+            {/* <div className="bottom-menu">
+                <a href="#">Settings</a>
                 <a href="#">Hesab</a>
                 <a href="#">Çıxış</a>
                 <p className="smart">© 2024 Smart Business Manager</p>
-            </div>
+            </div> */}
         </div>
     )
 }

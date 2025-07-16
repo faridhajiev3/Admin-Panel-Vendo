@@ -1,0 +1,50 @@
+$background-color: #f8f9fa;
+$white-bg: #ffffff;
+$sidebar-bg: #f1f3f4;
+$border-color: #e1e5e9;
+$text-color: #333;
+$text-muted: #666;
+$active-color: #f0e6d2;
+$active-text: #8b6914;
+$button-color: #000;
+$input-bg: #f8f9fa;
+
+.settings-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebars {
+    width: 200px;
+    padding: 20px;
+    background: $background-color;
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+
+
+    h2 {
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+
+    .set-link {
+        padding: 10px;
+        color: $text-color;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebars {
+        // flex-direction: row;
+        min-width: 100%;
+    }
+}
+

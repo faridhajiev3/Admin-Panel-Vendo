@@ -5,8 +5,8 @@ function Transactions() {
     return (
         <div className='products-container'>
             <h2>Transactions</h2>
-            <div>
-                <table>
+            <div className='table-wrapper'>
+                <table className='products-table'>
                     <thead>
                         <tr>
                             <th>TYPE</th>

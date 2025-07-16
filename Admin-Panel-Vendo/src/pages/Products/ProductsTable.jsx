@@ -3,7 +3,7 @@ import { ProductsData } from '../../data/ProductsData'
 
 function ProductsTable() {
     return (
-        <table>
+        <table className='products-table'>
             <thead>
                 <tr>
                     <th>Product</th>
@@ -21,7 +21,13 @@ function ProductsTable() {
                 {
                     ProductsData.map((item) => (
                         <tr key={item.id}>
-                            <td><img src={item.image} alt="Rare Beauty Blush" /> Rare Beauty<br />Liquid Blush</td>
+                            <td class="product-cell">
+                                <img src={item.image} alt="Rare Beauty Blush" />
+                                <div class="product-info">
+                                    <span class="product-name">Rare Beauty</span>
+                                    <span class="product-desc">Liquid Blush</span>
+                                </div>
+                            </td>
                             <td>{item.id}</td>
                             <td>{item.category}</td>
                             <td>{item.stock}</td>

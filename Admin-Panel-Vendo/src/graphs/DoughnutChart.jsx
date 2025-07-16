@@ -1,31 +1,16 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    ArcElement,
-    Tooltip,
-    Legend,
-} from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () => {
     const data = {
-        labels: [
-            'Rare Beauty Blush',
-            'Rare Beauty Foundation',
-            'Rare Beauty Bronzer',
-            'Rare Beauty Highlighter',
-        ],
+        labels: ['Rare Beauty Blush', 'Rare Beauty Foundation', 'Rare Beauty Bronzer', 'Rare Beauty Highlighter'],
         datasets: [
             {
                 data: [24000, 11000, 9000, 35000],
-                backgroundColor: [
-                    '#d6d6d6',
-                    '#b0b0b0',
-                    '#e9e9e9',
-                    '#000000',
-                ],
+                backgroundColor: ['#d6d6d6', '#b0b0b0', '#e9e9e9', '#000000'],
                 borderWidth: 2,
                 cutout: '70%',
                 borderRadius: 10,
@@ -36,17 +21,11 @@ const DoughnutChart = () => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: false, // Bu, genişlik-hündürlüyü flexibl edir
         plugins: {
-            legend: {
-                display: false,
-            },
+            legend: { display: false },
             tooltip: {
-                callbacks: {
-                    label: (context) => {
-                        return `${context.label}: ${context.raw.toLocaleString()} sales`;
-                    },
-                },
+                callbacks: { label: (context) => `${context.label}: ${context.raw.toLocaleString()} sales` },
             },
         },
     };
@@ -54,44 +33,27 @@ const DoughnutChart = () => {
     const totalSales = 290565;
 
     return (
-        <div style={{
-            width: '530px',
-            backgroundColor: '#fff',
-            borderRadius: '16px',
-            padding: '24px',
-        }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <h2 style={{ color: '#888', fontSize: '18px' }}>Best Selling Products</h2>
-                <div style={{
-                    padding: '8px 14px',
-                    backgroundColor: '#fff',
-                    border: '1px solid #ccc',
-                    borderRadius: '20px',
-                    fontSize: '14px'
-                }}>
+        <div className='w-full max-w-[580px] bg-white rounded-[16px] p-6'>
+            <div className='flex justify-between items-center mb-[20px]'>
+                <h2 className=' text-[18px] text-[#888]'>Best Selling Products</h2>
+                <div className='px-[14px] py-[8px] bg-white border border-[#ccc] rounded-[20px] text-[14px]'>
                     Rare Beauty ⌄
                 </div>
             </div>
 
-            <div style={{ position: 'relative', height: '350px' }}>
+            <div className='relative h-[350px] min-h-[250px]'>
                 <Doughnut data={data} options={options} />
-                <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    textAlign: 'center'
-                }}>
-                    <div style={{ fontSize: '28px', fontWeight: 'bold' }}>{totalSales.toLocaleString()}</div>
-                    <div style={{ color: '#888' }}>Total sales</div>
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center'>
+                    <div className='text-[28px]'>{totalSales.toLocaleString()}</div>
+                    <div className='text-[#888]'>Total sales</div>
                 </div>
             </div>
 
-            <div style={{ marginTop: '30px', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '14px' }}>
-                <span style={{ color: '#999' }}><span style={dot('#d6d6d6')}></span> Rare Beauty Blush — <b>24k sales</b></span>
-                <span style={{ color: '#999' }}><span style={dot('#b0b0b0')}></span> Rare Beauty Foundation — <b>11k sales</b></span>
-                <span style={{ color: '#999' }}><span style={dot('#e9e9e9')}></span> Rare Beauty Bronzer — <b>9k sales</b></span>
-                <span style={{ color: '#000' }}><span style={dot('#000')}></span> Rare Beauty Highlighter — <b>35k sales</b></span>
+            <div className='mt-[30px] flex flex-col gap-[12px] text-[14px]'>
+                <span className='text-[#999]'><span className={dot("text-[#d6d6d6]")} ></span> Rare Beauty Blush — <b>24k sales</b></span>
+                <span className='text-[#999]'><span className={dot("text-[#b0b0b0]")} ></span> Rare Beauty Foundation — <b>11k sales</b></span>
+                <span className='text-[#999]'><span className={dot("text-[#e9e9e9]")} ></span> Rare Beauty Bronzer — <b>9k sales</b></span>
+                <span className='text-[#999]'><span className={dot("text-[#000]")}></span> Rare Beauty Highlighter — <b>35k sales</b></span>
             </div>
         </div>
     );
