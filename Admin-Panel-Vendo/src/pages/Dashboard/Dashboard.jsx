@@ -14,7 +14,7 @@ function Dashboard() {
     return (
         <div className='dashboard-container'>
             <div className='analysis-info'>
-                <h2>
+                <h2 className='desc'>
                     Dashboard
                 </h2>
                 <div>

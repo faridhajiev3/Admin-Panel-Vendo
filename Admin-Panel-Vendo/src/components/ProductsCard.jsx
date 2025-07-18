@@ -1,16 +1,12 @@
 import React from 'react'
 
-function ProductsCard({ icon, content, price }) {
+function ProductsCard({ icon, content, price, backColor, iconColor }) {
     return (
-        <div className='card-items'>
-            <div className='card-contents'>
-                <div className='card-icons'>
-                    {icon}
-                </div>
-                <div className='plus' >
-                    <p>{content}</p>
-                    <h3>{price}$</h3>
-                </div>
+        <div className="box total-product">
+            <span className="icon" style={{backgroundColor: backColor, color:iconColor}}>{icon}</span>
+            <div>
+                <h3>{content}</h3>
+                <p>{price}</p>
             </div>
         </div>
     )
